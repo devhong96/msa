@@ -29,9 +29,14 @@ public class FirstServiceController {
     }
 
     @GetMapping("/check")
-    public String check(HttpServletRequest request)  {
-        log.info("Server port = {}" , request.getServerPort());
-        return String.format("Hello This is a message from First Service on Port %s"
-                , environment.getProperty("local.server.port"));
+    public String check() {
+        return "First Service is up and running!";
     }
+
+//    @GetMapping("/check")
+//    public String check(HttpServletRequest request)  {
+//        log.info("Server port = {}" , request.getServerPort());
+//        return String.format("Hello This is a message from First Service on Port %s"
+//                , environment.getProperty("local.server.port"));
+//    }
 }
