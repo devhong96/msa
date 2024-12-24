@@ -26,6 +26,7 @@ spring:
             # 띄어쓰기하면 안됨.
             predicates:
               - Path=/user-service/**
+
           - id: first-service
 #            uri: http://localhost:8081/
             uri: lb://MY-FIRST-SERVICE
@@ -37,6 +38,7 @@ spring:
 #              - AddRequestHeader=first-request, first-request-header2
 #              - AddResponseHeader=first-response, first-response-header2
               - CustomFilter
+
           - id: second-service
 #            uri: http://localhost:8082/
             uri: lb://MY-SECOND-SERVICE
